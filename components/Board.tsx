@@ -3,9 +3,9 @@ import BoardColumn from "./BoardColumn";
 
 export default function Board() {
     return (
-        <View style={styles.board_big}>
-            <View style={styles.board_container}>
-                <View style={[styles.board_margin, styles.left]}/>
+        <View style={styles.boardBig}>
+            <View style={styles.boardContainer}>
+                <View style={[styles.boardMargin, styles.left]}/>
                 <View style={styles.board}>
                     <BoardColumn/>
                     <BoardColumn/>
@@ -15,20 +15,20 @@ export default function Board() {
                     <BoardColumn/>
                     <BoardColumn/>
                 </View>
-                <View style={[styles.board_margin, styles.right]}/>
+                <View style={[styles.boardMargin, styles.right]}/>
             </View>
-            <View style={styles.board_margin_bottom}/>
+            <View style={styles.boardMarginBottom}/>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    board_big: {
+    boardBig: {
         flexDirection: "column",
         width: "95%",
         height: 330, // TODO
     },
-    board_container: {
+    boardContainer: {
         flexDirection: "row",
         flex: 1,
     },
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         width: "90%",
     },
-    board_margin: {
+    boardMargin: {
         flex: 1,
         backgroundColor: "rgba(0, 170, 212, 255)",
     },
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     right: {
         borderTopRightRadius: 25,
     },
-    board_margin_bottom: {
+    boardMarginBottom: {
         height: 20,
         width: "100%",
         backgroundColor: "rgba(0, 102, 128, 255)",

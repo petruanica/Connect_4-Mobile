@@ -2,24 +2,24 @@ import {StyleSheet, View} from "react-native";
 
 export default function BoardColumn() {
     return (
-        <View style={styles.board_column}>
-            <View style={styles.board_cell}/>
-            <View style={styles.board_cell}/>
-            <View style={styles.board_cell}/>
-            <View style={styles.board_cell}/>
-            <View style={styles.board_cell}/>
-            <View style={styles.board_cell}/>
+        <View style={styles.boardColumn}>
+            <View style={styles.boardCell}/>
+            <View style={styles.boardCell}/>
+            <View style={styles.boardCell}/>
+            <View style={styles.boardCell}/>
+            <View style={styles.boardCell}/>
+            <View style={styles.boardCell}/>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    board_column: {
+    boardColumn: {
         flex: 1,
         paddingTop: 5,
         flexDirection: "column",
     },
-    board_cell: {
+    boardCell: {
         flex: 1,
         margin: 5,
         borderRadius: 20,
