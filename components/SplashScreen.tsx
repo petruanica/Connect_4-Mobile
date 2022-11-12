@@ -2,6 +2,7 @@ import {Image, StyleSheet, View} from "react-native";
 import CoolButton from "./CoolButton";
 import Footer from "./Footer";
 import {StatusBar} from "expo-status-bar";
+import {navigate, NavigationScreens} from "../utils/navigation";
 
 
 export default function Splash() {
@@ -14,8 +15,14 @@ export default function Splash() {
 				</View>
 			</View>
 			<View style={{flex: 1, width: '100%'}}>
-				<CoolButton text="Play"/>
-				<CoolButton text="Tutorial"/>
+				<View style={styles.buttonStyle}>
+					<CoolButton text="Play"/>
+				</View>
+				<View style={styles.buttonStyle}>
+					<CoolButton text="Tutorial" onPress={() => {
+						navigate(NavigationScreens.Tutorial);
+					}}/>
+				</View>
 				<StatusBar style="auto"/>
 			</View>
 			<Footer/>
@@ -25,7 +32,7 @@ export default function Splash() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#fff',
+		backgroundColor: '#ffffff',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
@@ -34,6 +41,10 @@ const styles = StyleSheet.create({
 		height: undefined,
 		width: undefined,
 		resizeMode: "contain"
+	},
+	buttonStyle: {
+		marginHorizontal: 40,
+		marginVertical: 20,
 	},
 	logoWrapper: {
 		flex: 0.4, padding: 20, width: '100%'
