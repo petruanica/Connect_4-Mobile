@@ -1,6 +1,6 @@
 import {Modal, StyleSheet, Text, View} from "react-native";
-import CoolText from "./CoolText";
-import CoolButton from "./CoolButton";
+import CoolText from "../components/CoolText";
+import CoolButton from "../components/CoolButton";
 import {navigateBack} from "../utils/navigation";
 
 

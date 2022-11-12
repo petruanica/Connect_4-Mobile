@@ -4,7 +4,7 @@ import {useCallback} from "react";
 import Splash from "./components/SplashScreen";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Tutorial from "./components/Tutorial";
+import Tutorial from "./screens/Tutorial";
 import {navigationRef, NavigationScreens} from "./utils/navigation";
 
 SplashScreen.preventAutoHideAsync();
