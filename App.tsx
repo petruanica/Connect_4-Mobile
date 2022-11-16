@@ -13,6 +13,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
     const [fontsLoaded] = useFonts({
         'Nunito': require('./assets/fonts/Nunito-Regular.ttf'),
+        'Virgil': require("./assets/fonts/Virgil.ttf")
     });
     const onLayoutRootView = useCallback(async () => {
         if (fontsLoaded) {
