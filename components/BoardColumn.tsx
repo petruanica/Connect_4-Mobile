@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     boardCell: {
         flex: 1,
         margin: 5,
-        borderRadius: 20,
+        borderRadius: 1000,
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "white",

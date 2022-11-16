@@ -1,4 +1,4 @@
-import {StyleSheet, View} from "react-native";
+import {Dimensions, StyleSheet, View} from "react-native";
 import BoardColumn from "./BoardColumn";
 
 export default function Board() {
@@ -22,15 +22,21 @@ export default function Board() {
     );
 }
 
+const rows = 6
+const columns = 7
+const windowWidth = Dimensions.get("window").width;
+const containerWidth = windowWidth * 0.95
+const boardSizeUnit = Math.floor((windowWidth * 0.90) / columns);
+const boardWidth = boardSizeUnit * columns;
+const boardHeight = boardSizeUnit * rows;
+
 const styles = StyleSheet.create({
     boardBig: {
         flexDirection: "column",
-        width: "95%",
-        height: 330, // TODO
+        width: containerWidth,
     },
     boardContainer: {
         flexDirection: "row",
-        flex: 1,
     },
     board: {
         backgroundColor: "rgba(0, 136, 170, 255)",
@@ -39,10 +45,11 @@ const styles = StyleSheet.create({
         alignContent: "space-between",
         flexWrap: "nowrap",
         flexDirection: "row",
-        width: "90%",
+        width: boardWidth,
+        height: boardHeight,
     },
     boardMargin: {
-        flex: 1,
+        width: (containerWidth - boardWidth) / 2,
         backgroundColor: "rgba(0, 170, 212, 255)",
     },
     left: {
@@ -53,7 +60,7 @@ const styles = StyleSheet.create({
     },
     boardMarginBottom: {
         height: 20,
-        width: "100%",
+        width: containerWidth,
         backgroundColor: "rgba(0, 102, 128, 255)",
     },
 });
